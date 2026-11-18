@@ -29,4 +29,5 @@ int main() {
     cout << "Students in the incomplete row: " << remainder << '\n';
 
     return 0;
-}
+}// зміни від другого розробника
+// зміни від другого розробника
