@@ -1,27 +1,32 @@
 #include <iostream>
 
 using namespace std;
+
 int main() {
-    int students;
-    int studentsPerRow;
+    int totalStudents = 0;
+    int rowCapacity = 0;
 
     cout << "Enter the total number of students: ";
-    cin >> students;
+    cin >> totalStudents;
 
     cout << "Enter the number of students in a row: ";
-    cin >> studentsPerRow;
+    cin >> rowCapacity;
 
-    if (studentsPerRow <= 0) {
+    if (rowCapacity <= 0) {
         cout << "Error: the number of students in a row must be greater than 0.\n";
-    } else if (students < 0) {
-        cout << "Error: the number of students cannot be negative.\n";
-    } else {
-        const int completeRows = students / studentsPerRow;
-        const int studentsInIncompleteRow = students % studentsPerRow;
-
-        cout << "Number of complete rows: " << completeRows << '\n';
-        cout << "Students in the incomplete row: "<< studentsInIncompleteRow << '\n';
+        return 0;
     }
+
+    if (totalStudents < 0) {
+        cout << "Error: the number of students cannot be negative.\n";
+        return 0;
+    }
+
+    int fullRows = totalStudents / rowCapacity;
+    int remainder = totalStudents % rowCapacity;
+
+    cout << "Number of complete rows: " << fullRows << '\n';
+    cout << "Students in the incomplete row: " << remainder << '\n';
 
     return 0;
 }
