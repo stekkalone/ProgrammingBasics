@@ -4,6 +4,7 @@ using namespace std;
 
 int main() {
     int totalStudents = 0;
+    
     int rowCapacity = 0;
 
     cout << "Enter the total number of students: ";
@@ -23,6 +24,7 @@ int main() {
     }
 
     int fullRows = totalStudents / rowCapacity;
+
     int remainder = totalStudents % rowCapacity;
 
     cout << "Number of complete rows: " << fullRows << '\n';
