@@ -29,4 +29,4 @@ int main() {
     cout << "Students in the incomplete row: " << remainder << '\n';
 
     return 0;
-}
+}// v1.0 release
